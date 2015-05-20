@@ -172,6 +172,19 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
   </component>
+  <component name="libraryTable">
+    <library name="stanford-postagger">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </SOURCES>
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" />
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" type="SOURCES" />
+    </library>
+  </component>
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">
