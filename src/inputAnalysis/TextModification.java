@@ -8,7 +8,7 @@ public abstract class TextModification {
     public static String tokenize(String s) {
 
         // Tokenizing the string
-        StringTokenizer tokenizer = new StringTokenizer(s, " \t\n\r\f,.:;?![]'");
+        StringTokenizer tokenizer = new StringTokenizer(s, " \t\n\r\f,.:;?![]'()/");
 
         // Printing the tokenized string
         String temp = "";

@@ -1,6 +1,5 @@
 package inputAnalysis.textAnalysis;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -9,7 +8,7 @@ public class IsQuestion {
     private static final String[] SET_VALUES = new String[]{"who", "where", "when", "why", "what", "which", "how", "is"};
     private static final Set<String> MY_SET = new HashSet<String>(Arrays.asList(SET_VALUES));
 
-    public static boolean check(ArrayList<String> l, String s) {
+    public static boolean check(String s) {
         return questionMark(s) || startsWith(s);
     }
 

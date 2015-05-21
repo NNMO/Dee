@@ -1,30 +1,45 @@
 package inputAnalysis;
 
 import inputAnalysis.textAnalysis.IsQuestion;
+import inputAnalysis.textAnalysis.Subject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TextInterpreter {
     private HashMap<String, String> tags;
-    private boolean active = false;
+    private ArrayList<String> wordList;
+    private ArrayList<String> tagList;
 
     public void analyze(String s) {
-        if(IsQuestion.check(new ArrayList<String>(), s))
-        System.out.println("You asked a question");
+        update(s);
+
+        if (IsQuestion.check(s))
+            System.out.print("You asked a question ");
         else
-            System.out.println("You made a statement");
+            System.out.print("You made a statement ");
+
+        //System.out.println(tagList);
+        //System.out.println(wordList);
+
+        System.out.print("about " + Subject.check(tagList, wordList));
+    }
+
+    private void update(String s) {
+        wordList = getWords(TextModification.tokenize(s));
+        tagList = getWordTypes(TextModification.posTag(TextModification.tokenize(s)));
     }
 
     private ArrayList<String> getWordTypes(String s) {
-        ArrayList<String> list = new ArrayList<String>();
+        boolean active = false;
+        ArrayList<String> ret = new ArrayList<String>();
         String temp = "";
 
         for (int i = 0; i < s.length(); i++) {
             if (active) {
                 if (s.charAt(i) == ' ') {
                     active = false;
-                    list.add(temp);
+                    ret.add(temp);
                     temp = "";
                     continue;
                 }
@@ -33,7 +48,28 @@ public class TextInterpreter {
                 active = true;
             }
         }
-        return list;
+        ret.add(temp);
+        ret.remove(ret.size()-1);
+
+        return ret;
+    }
+
+    private ArrayList<String> getWords(String s) {
+        ArrayList<String> ret = new ArrayList<String>();
+        String temp = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ' ') {
+                ret.add(temp);
+                temp = "";
+                continue;
+            }
+            temp += s.charAt(i);
+        }
+        ret.add(temp);
+        ret.remove(0);
+
+        return ret;
     }
 
     private void printResult(String s) {
