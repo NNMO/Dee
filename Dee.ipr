@@ -184,6 +184,57 @@
       <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" />
       <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" type="SOURCES" />
     </library>
+    <library name="stanford-postagger (2)">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </SOURCES>
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" />
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" type="SOURCES" />
+    </library>
+    <library name="stanford-postagger (3)">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger" />
+      </SOURCES>
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger" recursive="false" />
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger" recursive="false" type="SOURCES" />
+    </library>
+    <library name="stanford-postagger (4)">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/src/stanford-postagger.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="stanford-postagger-full-2015-04-20">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </SOURCES>
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" />
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" type="SOURCES" />
+    </library>
+    <library name="stanford-postagger-full-2015-04-20 (2)">
+      <CLASSES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" />
+      </SOURCES>
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" />
+      <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger-full-2015-04-20" recursive="false" type="SOURCES" />
+    </library>
   </component>
   <component name="masterDetails">
     <states>

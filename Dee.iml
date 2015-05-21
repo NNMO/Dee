@@ -13,5 +13,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="stanford-postagger" level="project" />
+    <orderEntry type="library" name="stanford-postagger (2)" level="project" />
+    <orderEntry type="library" name="stanford-postagger-full-2015-04-20" level="project" />
+    <orderEntry type="library" name="stanford-postagger-full-2015-04-20 (2)" level="project" />
+    <orderEntry type="library" name="stanford-postagger (3)" level="project" />
+    <orderEntry type="library" name="stanford-postagger (4)" level="project" />
   </component>
 </module>
