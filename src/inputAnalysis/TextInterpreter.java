@@ -1,5 +1,7 @@
 package inputAnalysis;
 
+import inputAnalysis.textAnalysis.IsQuestion;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -8,7 +10,10 @@ public class TextInterpreter {
     private boolean active = false;
 
     public void analyze(String s) {
-        String temp = TextModification.posTag(TextModification.tokenize(s));
+        if(IsQuestion.check(new ArrayList<String>(), s))
+        System.out.println("You asked a question");
+        else
+            System.out.println("You made a statement");
     }
 
     private ArrayList<String> getWordTypes(String s) {
@@ -28,7 +33,6 @@ public class TextInterpreter {
                 active = true;
             }
         }
-
         return list;
     }
 
@@ -38,7 +42,6 @@ public class TextInterpreter {
 
     public TextInterpreter() {
         tags = new HashMap<String, String>();
-
         tags.put("CC", "Conjunction, coordinating");
         tags.put("CD", "Cardinal number");
         tags.put("DT", "Determiner");
