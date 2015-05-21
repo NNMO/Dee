@@ -1,28 +1,18 @@
-import edu.stanford.nlp.tagger.maxent.MaxentTagger;
+import inputAnalysis.TextInterpreter;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Created by markus on 20/05/15.
  */
 public class Main {
     public static void main(String[] args) throws IOException,ClassNotFoundException {
-        // Initialize the tagger
+        Scanner in = new Scanner(System.in);
+        String input = in.nextLine();
 
-        MaxentTagger tagger = new MaxentTagger("taggers/english-bidirectional-distsim.tagger");
+        TextInterpreter ti = new TextInterpreter();
 
-        // The sample string
-
-        String sample = "This is a sample text";
-
-        // The tagged string
-
-        String tagged = tagger.tagString(sample);
-
-        // Output the result
-
-        System.out.println(tagged);
-
-
+        ti.analyze(input);
     }
 }
