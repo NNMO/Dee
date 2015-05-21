@@ -4,9 +4,6 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
 
 import java.util.StringTokenizer;
 
-/**
- * Created by markus on 21/05/15.
- */
 public abstract class TextModification {
     public static String tokenize(String s) {
 
@@ -26,10 +23,9 @@ public abstract class TextModification {
         // Initialize the tagger
         MaxentTagger tagger = new MaxentTagger("taggers/english-bidirectional-distsim.tagger");
 
-        // The tagged string
-        String temp = tagger.tagString(s);
+        // Return the tagged string
+        return tagger.tagString(s);
 
-        return temp;
     }
 
 }

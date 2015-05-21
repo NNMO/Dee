@@ -1,28 +1,25 @@
 package inputAnalysis;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by markus on 21/05/15.
- */
 public class TextInterpreter {
-    private HashMap<String, String> tags = new HashMap<String, String>();
+    private HashMap<String, String> tags;
     private boolean active = false;
 
     public void analyze(String s) {
         String temp = TextModification.posTag(TextModification.tokenize(s));
-
-        getWordTypes(temp);
     }
 
-    private void getWordTypes(String s) {
+    private ArrayList<String> getWordTypes(String s) {
+        ArrayList<String> list = new ArrayList<String>();
         String temp = "";
 
         for (int i = 0; i < s.length(); i++) {
             if (active) {
                 if (s.charAt(i) == ' ') {
                     active = false;
-                    printResult(temp);
+                    list.add(temp);
                     temp = "";
                     continue;
                 }
@@ -31,13 +28,17 @@ public class TextInterpreter {
                 active = true;
             }
         }
+
+        return list;
     }
 
     private void printResult(String s) {
-        System.out.println(tags.get(s));
+        System.out.println(s);
     }
 
     public TextInterpreter() {
+        tags = new HashMap<String, String>();
+
         tags.put("CC", "Conjunction, coordinating");
         tags.put("CD", "Cardinal number");
         tags.put("DT", "Determiner");
