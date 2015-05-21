@@ -37,6 +37,7 @@ Thumbs.db
 
 # Other #
 ######################
+src/stanford-postagger
 Dee.iws
 Dee.ipr
 Dee.iml
