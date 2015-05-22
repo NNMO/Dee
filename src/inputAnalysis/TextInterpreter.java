@@ -1,8 +1,5 @@
 package inputAnalysis;
 
-import inputAnalysis.textAnalysis.IsQuestion;
-import inputAnalysis.textAnalysis.Subject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -10,11 +7,12 @@ public class TextInterpreter {
     private HashMap<String, String> tags;
     private ArrayList<String> wordList;
     private ArrayList<String> tagList;
+    private TextAnalysis ta;
 
     public void analyze(String s) {
         update(s);
 
-        if (IsQuestion.check(s))
+        if (ta.checkQuestion(s))
             System.out.print("You asked a question ");
         else
             System.out.print("You made a statement ");
@@ -22,7 +20,7 @@ public class TextInterpreter {
         //System.out.println(tagList);
         //System.out.println(wordList);
 
-        System.out.print("about " + Subject.check(tagList, wordList));
+        System.out.print("about " + ta.checkSubject(tagList, wordList));
     }
 
     private void update(String s) {
@@ -77,6 +75,8 @@ public class TextInterpreter {
     }
 
     public TextInterpreter() {
+        ta = new TextAnalysis();
+
         tags = new HashMap<String, String>();
         tags.put("CC", "Conjunction, coordinating");
         tags.put("CD", "Cardinal number");

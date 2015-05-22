@@ -8,16 +8,16 @@ http://nlp.stanford.edu/software/tagger.shtml .  If you have downloaded
 the full tagger, all of the models mentioned in this document are in the
 downloaded package in the same directory as this readme.  Otherwise,
 included in the download are two 
-English taggers, and the other taggers may be downloaded from the
-website.  All taggers are accompanied by the props files used to create
+English Resources.taggers, and the other Resources.taggers may be downloaded from the
+website.  All Resources.taggers are accompanied by the props files used to create
 them; please examine these files for more detailed information about the
-creation of the taggers.
+creation of the Resources.taggers.
 
-For English, the bidirectional taggers are slightly more accurate, but
+For English, the bidirectional Resources.taggers are slightly more accurate, but
 tag much more slowly; choose the appropriate tagger based on your
 speed/performance needs.
 
-English taggers
+English Resources.taggers
 ---------------------------
 wsj-0-18-bidirectional-distsim.tagger
 Trained on WSJ sections 0-18 using a bidirectional architecture and

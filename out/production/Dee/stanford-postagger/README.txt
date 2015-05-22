@@ -15,7 +15,7 @@ text in some language and assigns parts of speech to each word (and
 other tokens), such as noun, verb, adjective, etc. Generally
 computational applications use more fine-grained POS tags like
 'noun-plural'. This software is a Java implementation of the log-linear
-part-of-speech (POS) taggers described in:
+part-of-speech (POS) Resources.taggers described in:
 
 Kristina Toutanova and Christopher D. Manning. 2000. Enriching the
 Knowledge Sources Used in a Maximum Entropy Part-of-Speech
@@ -143,16 +143,16 @@ build.xml, Makefile
 
 models
 
-  A directory containing trained POS taggers; the taggers end in ".tagger"
-  and the props file used to make the taggers end in ".props". The
+  A directory containing trained POS Resources.taggers; the Resources.taggers end in ".tagger"
+  and the props file used to make the Resources.taggers end in ".props". The
   ".props" files cannot be directly used on your own machine as they use
   paths on the Stanford NLP machines, but they may serve as examples for
   your own properties files. Included in the full version are other
-  English taggers, a German tagger, an Arabic tagger, and a Chinese
+  English Resources.taggers, a German tagger, an Arabic tagger, and a Chinese
   tagger. If you chose to download the smaller version of the tagger,
-  you have only two English taggers (left3words is faster but slightly
+  you have only two English Resources.taggers (left3words is faster but slightly
   less accurate than bidirectional-distsim) - feel free to download any
-  other taggers you need from the POS tagger website. More information
+  other Resources.taggers you need from the POS tagger website. More information
   about the models can be found in the README-Models.txt file in this
   directory. 
 

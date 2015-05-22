@@ -197,11 +197,11 @@
     </library>
     <library name="stanford-postagger (3)">
       <CLASSES>
-        <root url="file://$PROJECT_DIR$/src/stanford-postagger" />
+        <root url="file://$PROJECT_DIR$/src/Resources/stanford-postagger" />
       </CLASSES>
       <JAVADOC />
       <SOURCES>
-        <root url="file://$PROJECT_DIR$/src/stanford-postagger" />
+        <root url="file://$PROJECT_DIR$/src/Resources/stanford-postagger" />
       </SOURCES>
       <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger" recursive="false" />
       <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger" recursive="false" type="SOURCES" />
@@ -209,6 +209,13 @@
     <library name="stanford-postagger (4)">
       <CLASSES>
         <root url="jar://$PROJECT_DIR$/src/stanford-postagger.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="stanford-postagger (5)">
+      <CLASSES>
+        <root url="jar://$PROJECT_DIR$/src/Resources/stanford-postagger.jar!/" />
       </CLASSES>
       <JAVADOC />
       <SOURCES />
