@@ -41,3 +41,5 @@ src/Resources/stanford-postagger
 Dee.iws
 Dee.ipr
 Dee.iml
+workspace.xml
+tasks.xml

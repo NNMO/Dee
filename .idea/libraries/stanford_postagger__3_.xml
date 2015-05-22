@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="stanford-postagger (3)">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/Resources/stanford-postagger" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src/Resources/stanford-postagger" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/src/stanford-postagger" recursive="false" type="SOURCES" />
+  </library>
+</component>
