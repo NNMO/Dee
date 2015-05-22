@@ -15,14 +15,18 @@ public class TextInterpreter {
         update(s);
 
         if (ta.getIfQuestion(s))
-            System.out.print("You asked a question ");
+            System.out.print("You asked a question");
         else
-            System.out.print("You made a statement ");
+            System.out.print("You made a statement");
 
         //System.out.println(tagList);
         //System.out.println(wordList);
 
-        System.out.print("about " + ta.getSubject(tagList, wordList));
+        System.out.print(" about " + ta.getSubject(tagList, wordList));
+
+        System.out.println();
+
+        ta.evaluateSentence(wordList);
     }
 
     private void update(String s) {
