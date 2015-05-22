@@ -1,15 +1,16 @@
 package inputAnalysis;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.*;
 
 /**
  * Created by markus on 22/05/15.
  */
 public class TextAnalysis {
-    public TextAnalysis() {
+    public TextAnalysis() throws IOException{
+        loadDictionary();
     }
 
     /**
@@ -63,6 +64,50 @@ public class TextAnalysis {
         }
 
         return MY_SET.contains(temp.toLowerCase());
+    }
+
+    /**
+     * Methods handling positivity/negativity
+     * */
+
+    private static Map<String, float[]> dictionary;
+
+    private static void loadDictionary() throws IOException {
+
+        dictionary = new HashMap<String, float[]>();
+
+        BufferedReader csv = null;
+        try {
+            csv = new BufferedReader(new FileReader("src/Resources/test.txt"));
+            int lineNumber = 0;
+
+            String line;
+            while ((line = csv.readLine()) != null) {
+                lineNumber++;
+
+
+                if (!line.trim().startsWith("#")) {
+
+                    String[] data = line.split("\t");
+
+                    float[] scoreArray = {Float.parseFloat(data[1]), Float.parseFloat(data[2])};
+                    dictionary.put(data[0], scoreArray);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (csv != null) {
+                csv.close();
+            }
+        }
+    }
+
+    private static float[] getPosAndNeg(String string){
+
+        float[] values = {dictionary.get(string)[0], dictionary.get(string)[1]};
+
+        return values;
     }
 
 }

@@ -1,5 +1,6 @@
 package inputAnalysis;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -33,7 +34,7 @@ public class TextInterpreter {
         System.out.println(s);
     }
 
-    public TextInterpreter() {
+    public TextInterpreter() throws IOException{
         ta = new TextAnalysis();
         tm = new TextModification();
 
