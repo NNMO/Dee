@@ -12,7 +12,11 @@ public class TextAnalysis {
     public TextAnalysis() {
     }
 
-    public String checkSubject(ArrayList<String> tags, ArrayList<String> words) {
+    /**
+     * Methods handling the subject
+     * */
+
+    public String getSubject(ArrayList<String> tags, ArrayList<String> words) {
         return findNoun(tags, words);
     }
 
@@ -31,10 +35,14 @@ public class TextAnalysis {
         return temp;
     }
 
+    /**
+     * Methods handling questions
+     * */
+
     private final String[] SET_VALUES = new String[]{"who", "where", "when", "why", "what", "which", "how", "is"};
     private final Set<String> MY_SET = new HashSet<String>(Arrays.asList(SET_VALUES));
 
-    public boolean checkQuestion(String s) {
+    public boolean getIfQuestion(String s) {
         return questionMark(s) || startsWith(s);
     }
 

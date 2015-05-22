@@ -8,11 +8,12 @@ public class TextInterpreter {
     private ArrayList<String> wordList;
     private ArrayList<String> tagList;
     private TextAnalysis ta;
+    private TextModification tm;
 
     public void analyze(String s) {
         update(s);
 
-        if (ta.checkQuestion(s))
+        if (ta.getIfQuestion(s))
             System.out.print("You asked a question ");
         else
             System.out.print("You made a statement ");
@@ -20,54 +21,12 @@ public class TextInterpreter {
         //System.out.println(tagList);
         //System.out.println(wordList);
 
-        System.out.print("about " + ta.checkSubject(tagList, wordList));
+        System.out.print("about " + ta.getSubject(tagList, wordList));
     }
 
     private void update(String s) {
-        wordList = getWords(TextModification.tokenize(s));
-        tagList = getWordTypes(TextModification.posTag(TextModification.tokenize(s)));
-    }
-
-    private ArrayList<String> getWordTypes(String s) {
-        boolean active = false;
-        ArrayList<String> ret = new ArrayList<String>();
-        String temp = "";
-
-        for (int i = 0; i < s.length(); i++) {
-            if (active) {
-                if (s.charAt(i) == ' ') {
-                    active = false;
-                    ret.add(temp);
-                    temp = "";
-                    continue;
-                }
-                temp += s.charAt(i);
-            } else if (s.charAt(i) == '_') {
-                active = true;
-            }
-        }
-        ret.add(temp);
-        ret.remove(ret.size()-1);
-
-        return ret;
-    }
-
-    private ArrayList<String> getWords(String s) {
-        ArrayList<String> ret = new ArrayList<String>();
-        String temp = "";
-
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == ' ') {
-                ret.add(temp);
-                temp = "";
-                continue;
-            }
-            temp += s.charAt(i);
-        }
-        ret.add(temp);
-        ret.remove(0);
-
-        return ret;
+        wordList = tm.getWords(s);
+        tagList = tm.getWordTypes(s);
     }
 
     private void printResult(String s) {
@@ -76,6 +35,7 @@ public class TextInterpreter {
 
     public TextInterpreter() {
         ta = new TextAnalysis();
+        tm = new TextModification();
 
         tags = new HashMap<String, String>();
         tags.put("CC", "Conjunction, coordinating");
